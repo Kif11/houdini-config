@@ -1,0 +1,294 @@
+fullscreen   -1
+playbarshown 1
+playbar      -1
+shelf        -1
+menubar      -1
+statusbar    -1
+radial menu set layoutbrush
+root {
+    split 0.374219 H {
+        split 0.11181 H L {
+            tabs 0 1 {
+                pane panetab14 -a 0 -l 10 -H /stage/ -T LOP -m treecontrol
+            }
+            split 0.279623 V R {
+                tabs 6 1 {
+                    pane panetab2 -a 0 -l 10 -H /stage/ -T LOP -m chaneditor
+                    pane panetab3 -a 0 -l 10 -H /stage/ -T LOP -m iprviewer
+                    pane panetab4 -a 0 -l 10 -H /img/ -T IMG -m imageview
+                    pane panetab13 -a 0 -l 10 -H /ch/ -T CHOPNET -m channelview
+                    pane panetab11 -a 0 -l 10 -H /stage/ -T LOP -m details
+                    pane panetab19 -a 0 -l 10 -H /stage/ -T LOP -m rendergallery
+                    pane panetab9 -a 0 -l 10 -H /stage/ -T LOP -m sceneview
+                    pane panetab1 -a 1 -l 10 -H /stage/ -T LOP -m pythonpanel
+                }
+                tabs 0 1 {
+                    pane panetab16 -a 0 -l 10 -H /stage/ -T LOP -m details
+                    pane panetab5 -a 0 -l 0 -H /obj/ -T OBJ -m python
+                    pane panetab6 -a 0 -l 0 -H /obj/ -T OBJ -m textport
+                    pane panetab10 -a 0 -l 0 -H /obj/ -T OBJ -m chaneditor
+                    pane panetab12 -a 0 -l 10 -H /stage/ -T LOP -m pythonpanel
+                    pane panetab15 -a 0 -l 10 -H /stage/ -T LOP -m apexeditor
+                }
+            }
+        }
+        split 0.54306 H {
+            tabs 0 1 {
+                pane panetab7 -a 0 -l 10 -H /stage/ -T LOP -m neteditor
+            }
+            split 0.5 V {
+                tabs 0 1 {
+                    pane panetab8 -a 0 -l 10 -H /stage/ -T LOP -m scenegraphtree
+                }
+                tabs 0 0 {
+                    pane panetab17 -a 0 -l 10 -H /stage/ -T LOP -m pythonpanel
+                }
+            }
+        }
+    }
+}
+shelfdock -o 0 -l icon_and_text -G "0.50 0.50" add shelf_set_1 shelf_set_2
+treecontrol -a 0 -h 0 -i 1 -f 0 -O 0 -S 0 -D 0 -H 0 -V 0 -C 0 -I 0 -R 0 panetab14
+iprview -t 0.1 -l 0 -e 1 -u 1  panetab3
+chopview -a 0 -c "" -k 1 -m 1 -b 1 -e 1 -f 0 -g 0 -H 1 -i 0 -j 1 -l 0 -n 1 -V 0 -y 0 -B 0 -s 0 -S 0.034375 -u 0 -v 0 -h -10 310 -r -1.5 1.5 panetab13
+geospreadsheet -c 0 -l horizontal -s 0.5 -m none -f 0 panetab11
+scenegraphtree -S 0.25 -m 2 -p "/collections /lights" -c  -i  -o  -x 1 -s 1 -M 0 -C primtype,descendants,kind,populated,loaded,activation,visibility,solo,selectability  panetab11
+ panetab19
+viewerstow -x open -b stow -l open -m hide -c open -d open ${DESKNAME}.panetab9.solaris
+viewerstow -b stow -x open -l open -m hide -c open -d open ${DESKNAME}.panetab9.solaris
+vieweroption -r 'View: Mantra' ${DESKNAME}.panetab9.solaris
+viewergrouplist -g off -s 0 0 -c  on -t matchselect -m '*' -e on -p off -h on ${DESKNAME}.panetab9.solaris
+vieweroption -p 0 ${DESKNAME}.panetab9.solaris
+viewlayout -s 2 ${DESKNAME}.panetab9.solaris
+viewerinspect ${DESKNAME}.panetab9.solaris mode ( objects ) object_properties ( ) prim_properties ( ) enable ( 0 ) magnify ( 1 )
+viewtype -t perspective ${DESKNAME}.panetab9.solaris.`vpname("${DESKNAME}.panetab9.solaris",2)`
+viewtype -t ortho_top ${DESKNAME}.panetab9.solaris.`vpname("${DESKNAME}.panetab9.solaris",1)`
+viewtype -t ortho_front ${DESKNAME}.panetab9.solaris.`vpname("${DESKNAME}.panetab9.solaris",3)`
+viewtype -t ortho_right ${DESKNAME}.panetab9.solaris.`vpname("${DESKNAME}.panetab9.solaris",4)`
+viewname -l on -n aaaa3 ${DESKNAME}.panetab9.solaris.`vpname("${DESKNAME}.panetab9.solaris",2)`
+viewname -l on -n aaaa2 ${DESKNAME}.panetab9.solaris.`vpname("${DESKNAME}.panetab9.solaris",1)`
+viewname -l on -n aaaa1 ${DESKNAME}.panetab9.solaris.`vpname("${DESKNAME}.panetab9.solaris",3)`
+viewname -l on -n aaaa0 ${DESKNAME}.panetab9.solaris.`vpname("${DESKNAME}.panetab9.solaris",4)`
+viewname -l off -n persp1 ${DESKNAME}.panetab9.solaris.`vpname("${DESKNAME}.panetab9.solaris",2)`
+viewname -l off -n top1 ${DESKNAME}.panetab9.solaris.`vpname("${DESKNAME}.panetab9.solaris",1)`
+viewname -l off -n front1 ${DESKNAME}.panetab9.solaris.`vpname("${DESKNAME}.panetab9.solaris",3)`
+viewname -l off -n right1 ${DESKNAME}.panetab9.solaris.`vpname("${DESKNAME}.panetab9.solaris",4)`
+viewdispset -m off always -n off always -c off always -u off always -x off always -N off always -C off always -b off always -M off always -v off always -V off always -U off always -h off -P off -p off -f off -o off -w off -s shade -F off -l on -L on -G off -B none -d uv -r unique scene ${DESKNAME}.panetab9.solaris.persp1
+viewdispset -t off  scene ${DESKNAME}.panetab9.solaris.persp1
+viewdispset -m off always -n off always -c off always -u off always -x off always -N off always -C off always -b off always -M off always -v off always -V off always -U off always -h off -P off -p off -f off -o off -w off -s shade -F off -l on -L on -G off -B none -d uv -r scene selectscene ${DESKNAME}.panetab9.solaris.persp1
+viewdispset -t off  selectscene ${DESKNAME}.panetab9.solaris.persp1
+viewdispset -m off always -n off always -c off always -u off always -x off always -N off always -C off always -b off always -M off always -v off always -V off always -U off always -h off -P off -p off -f off -o off -w off -s shade -F off -l on -L off -G on -B none -d uv -r unique ghostscene ${DESKNAME}.panetab9.solaris.persp1
+viewdispset -t off  ghostscene ${DESKNAME}.panetab9.solaris.persp1
+viewdispset -m off always -n off always -c off always -u off always -x off always -N off always -C off always -b off always -M off always -v off always -V off always -U off always -h off -P on -p off -f off -o off -w on -s shade -F off -l on -L on -G off -B none -d uv -r unique display ${DESKNAME}.panetab9.solaris.persp1
+viewdispset -t on  display ${DESKNAME}.panetab9.solaris.persp1
+viewdispset -m off always -n off always -c off always -u off always -x off always -N off always -C off always -b off always -M off always -v off always -V off always -U off always -h off -P on -p off -f off -o off -w off -s wire -F off -l on -L off -G off -B none -d uv -r unique current ${DESKNAME}.panetab9.solaris.persp1
+viewdispset -t off  current ${DESKNAME}.panetab9.solaris.persp1
+viewdispset -m off always -n off always -c off always -u off always -x off always -N off always -C off always -b off always -M off always -v off always -V off always -U off always -h off -P off -p off -f off -o off -w off -s wire -F on -l on -L off -G on -B none -d uv -r unique template ${DESKNAME}.panetab9.solaris.persp1
+viewdispset -t off  template ${DESKNAME}.panetab9.solaris.persp1
+viewdisplay -B dark -b off -d off -C 2 -e 1 -F on -f off -g on -G '*' -h off -H on -j off -J off -L on -n 0.2 -o off -O on -q on -r on -s off -t on -V 2 -z off -y off -x off -X off -U 4 -Y 4 -T on -R on -i on -D on -k off ${DESKNAME}.panetab9.solaris.persp1
+viewdisplay -Q on -m on -v on ${DESKNAME}.panetab9.solaris.persp1
+viewdisplay -W  off 0 0 ${DESKNAME}.panetab9.solaris.persp1
+viewdisplay -c on -l1 -K on -P points -p 3 ${DESKNAME}.panetab9.solaris.persp1
+viewdispopts -a on -A 0.5 -b current -B 0 -c 1 -C 60  -d  on -D 1 -g on -i on -n on -N 1000000 -o off -p 10 -P on -r off -R on -S 768 -l 128 -m 0.05 -M 1024 -s on -t 0.5 -u uv -w 0.1 -W 0.9 -x on -X off ${DESKNAME}.panetab9.solaris.persp1
+viewdispopts -f off -k 0 -I 1 -O on -T MatCap/OilClay.pic -U lookdev/uvgrid_grey.exr -v 1 ${DESKNAME}.panetab9.solaris.persp1
+viewdispopts -G 2 ${DESKNAME}.panetab9.solaris.persp1
+viewdispopts -j 1 -J 1 -K 1 ${DESKNAME}.panetab9.solaris.persp1
+vieweffect -a 2 -A 4 -b on -B 1 -d on -D on off -e 0.6 -E 0 0 -100 -f 2 -F 0 -g 1 -G 0 -h 1 -H on -i on -I 1 -j on -J 100 -K 2 -k 1 -l '' -m on -M 2048 -o off -O 3 -p off -P 3 -q 0 -Q 2 -r 2048 2048 -s 2 -t 100 -T 100 -u off -U off -v 256 256 256 -w 0.05 -W on -x 0.8 0.8 0.8 -X 0.8 0.8 0.8 -y 0.8 0.8 0.8 -Y 0.0025 0.0025 0.0025 -z 0.01 -Z 1 ${DESKNAME}.panetab9.solaris.persp1
+viewinfotext -m off -s off -t on ${DESKNAME}.panetab9.solaris.persp1
+viewlight  -a on -d on -e on -h on -l on -n 20 -s on ${DESKNAME}.panetab9.solaris.persp1
+viewbackground -b on -e off -q 1 -i off -m 0 0 -M 1 1 ${DESKNAME}.panetab9.solaris.persp1
+viewroto  -S file -F '' -C '' -a on -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off persp ${DESKNAME}.panetab9.solaris.persp1
+viewroto  -S file -F '' -C '' -a on -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off cam ${DESKNAME}.panetab9.solaris.persp1
+viewroto  -S file -F '' -C '' -a off -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off top ${DESKNAME}.panetab9.solaris.persp1
+viewroto  -S file -F '' -C '' -a off -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off front ${DESKNAME}.panetab9.solaris.persp1
+viewroto  -S file -F '' -C '' -a off -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off right ${DESKNAME}.panetab9.solaris.persp1
+viewroto  -S file -F '' -C '' -a off -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off bottom ${DESKNAME}.panetab9.solaris.persp1
+viewroto  -S file -F '' -C '' -a off -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off back ${DESKNAME}.panetab9.solaris.persp1
+viewroto  -S file -F '' -C '' -a off -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off left ${DESKNAME}.panetab9.solaris.persp1
+viewroto  -S file -F 'lookdev/uvgrid_grey.exr' -C '' -a on -f 'scale' -o 0 0 -s 1 1 -O 1 -B 0.2 -e off uv ${DESKNAME}.panetab9.solaris.persp1
+viewroto  -S file -F '' -C '' -a on -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off image ${DESKNAME}.panetab9.solaris.persp1
+viewforeground -d on -f on -D Pz -s 0 ${DESKNAME}.panetab9.solaris.persp1
+viewforeground -o 1 ${DESKNAME}.panetab9.solaris.persp1
+viewtransform ${DESKNAME}.panetab9.solaris.persp1 version ( 3 )  flag ( Fax )  orthowidth ( 103.488 )  focal ( 50 )  aperture ( 41.4214 )  window ( 0 1 0 1 )  winroll ( 0 )  clear ( 1 )  nearfar ( 0.1 10000 )  aspect ( 1.33333 )  pixelaspect ( 1 )  txyz ( 304.047 481.746 100.055 )  pxyz ( 302.05 484.319 10.5342 )  rotation ( 0.999832 0.0182755 0.00135368 0 0.0738683 -0.997268 -0.0183255 0.997101 0.0738559  )  homedistance ( 167.411 )  homeadjboxwidth ( 103.488 )  homeorthowidth ( 103.488 )  homeradius ( 158.765 )  homeaxis ( 0 )  homecustom ( 0.707107 -0.353553 0.612372 0 0.866025 0.5 -0.707107 -0.353553 0.612372  )  adjustlimits ( 0 )  fov ( 45b)  inffreecam ( 0 )  
+viewcamera -c '' ${DESKNAME}.panetab9.solaris.persp1
+vieworthogrid -d off -o 0 0 0 -s 0.2 0.2 -r 5 5 -R 1 ${DESKNAME}.panetab9.solaris.persp1
+viewuvgrid -r on -s 0.1 0.1 -P off -S 64 64 -O 0 0 -C on -t on ${DESKNAME}.panetab9.solaris.persp1
+viewagentopts  -L on -b 0 -d 1 -l 0 -m 4 -p 1000 -w 1 -B 1 ${DESKNAME}.panetab9.solaris.persp1
+viewcharacteropts  -D off ${DESKNAME}.panetab9.solaris.persp1
+viewonionskin  -e on -a 4 -b 4 -i 6 -o 0.5 -A 1 1 1 -B 1 1 1 ${DESKNAME}.panetab9.solaris.persp1
+viewposteffects  -D off -B off -t "" -f off -V off -S on -a 1 -b 5 -F 1 -g 1 -c 1 1 1 -C 1 1 1 -d 1e+06 -h 0 -H 100 10 -i 1 -I 1 -l 1 -n "" -o 1 -O 1 -r 0 1000 -R 1 200 -s 1 1 -u 0 -U 100 10 -v 0 ${DESKNAME}.panetab9.solaris.persp1
+viewposteffects  -e off -E 10 -T 0.95 -L 1 ${DESKNAME}.panetab9.solaris.persp1
+viewmaskoverlay -o 0.4 ${DESKNAME}.panetab9.solaris.persp1
+viewdispset -m off always -n off always -c off always -u off always -x off always -N off always -C off always -b off always -M off always -v off always -V off always -U off always -h off -P off -p off -f off -o off -w off -s shade -F off -l on -L on -G off -B none -d uv -r unique scene ${DESKNAME}.panetab9.solaris.top1
+viewdispset -t off  scene ${DESKNAME}.panetab9.solaris.top1
+viewdispset -m off always -n off always -c off always -u off always -x off always -N off always -C off always -b off always -M off always -v off always -V off always -U off always -h off -P off -p off -f off -o off -w off -s shade -F off -l on -L on -G off -B none -d uv -r scene selectscene ${DESKNAME}.panetab9.solaris.top1
+viewdispset -t off  selectscene ${DESKNAME}.panetab9.solaris.top1
+viewdispset -m off always -n off always -c off always -u off always -x off always -N off always -C off always -b off always -M off always -v off always -V off always -U off always -h off -P off -p off -f off -o off -w off -s shade -F off -l on -L off -G on -B none -d uv -r unique ghostscene ${DESKNAME}.panetab9.solaris.top1
+viewdispset -t off  ghostscene ${DESKNAME}.panetab9.solaris.top1
+viewdispset -m off always -n off always -c off always -u off always -x off always -N off always -C off always -b off always -M off always -v off always -V off always -U off always -h off -P on -p off -f off -o off -w on -s shade -F off -l on -L on -G off -B none -d uv -r unique display ${DESKNAME}.panetab9.solaris.top1
+viewdispset -t on  display ${DESKNAME}.panetab9.solaris.top1
+viewdispset -m off always -n off always -c off always -u off always -x off always -N off always -C off always -b off always -M off always -v off always -V off always -U off always -h off -P on -p off -f off -o off -w off -s wire -F off -l on -L off -G off -B none -d uv -r unique current ${DESKNAME}.panetab9.solaris.top1
+viewdispset -t off  current ${DESKNAME}.panetab9.solaris.top1
+viewdispset -m off always -n off always -c off always -u off always -x off always -N off always -C off always -b off always -M off always -v off always -V off always -U off always -h off -P off -p off -f off -o off -w off -s wire -F on -l on -L off -G on -B none -d uv -r unique template ${DESKNAME}.panetab9.solaris.top1
+viewdispset -t off  template ${DESKNAME}.panetab9.solaris.top1
+viewdisplay -B dark -b off -d off -C 2 -e 1 -F on -f off -g on -G '*' -h off -H on -j off -J off -L on -n 0.2 -o off -O on -q on -r on -s off -t on -V 2 -z off -y off -x off -X off -U 4 -Y 4 -T on -R on -i on -D on -k off ${DESKNAME}.panetab9.solaris.top1
+viewdisplay -Q on -m on -v on ${DESKNAME}.panetab9.solaris.top1
+viewdisplay -W  off 0 0 ${DESKNAME}.panetab9.solaris.top1
+viewdisplay -c on -l1 -K on -P points -p 3 ${DESKNAME}.panetab9.solaris.top1
+viewdispopts -a on -A 0.5 -b current -B 0 -c 1 -C 60  -d  on -D 1 -g on -i on -n on -N 1000000 -o off -p 10 -P on -r off -R on -S 768 -l 128 -m 0.05 -M 1024 -s on -t 0.5 -u uv -w 0.1 -W 0.9 -x on -X off ${DESKNAME}.panetab9.solaris.top1
+viewdispopts -f off -k 0 -I 1 -O on -T MatCap/OilClay.pic -U lookdev/uvgrid_grey.exr -v 1 ${DESKNAME}.panetab9.solaris.top1
+viewdispopts -G 2 ${DESKNAME}.panetab9.solaris.top1
+viewdispopts -j 1 -J 1 -K 1 ${DESKNAME}.panetab9.solaris.top1
+vieweffect -a 2 -A 4 -b on -B 1 -d on -D on off -e 0.6 -E 0 0 -100 -f 2 -F 0 -g 1 -G 0 -h 1 -H on -i on -I 1 -j on -J 100 -K 2 -k 1 -l '' -m on -M 2048 -o off -O 3 -p off -P 3 -q 0 -Q 2 -r 2048 2048 -s 2 -t 100 -T 100 -u off -U off -v 256 256 256 -w 0.05 -W on -x 0.8 0.8 0.8 -X 0.8 0.8 0.8 -y 0.8 0.8 0.8 -Y 0.0025 0.0025 0.0025 -z 0.01 -Z 1 ${DESKNAME}.panetab9.solaris.top1
+viewinfotext -m off -s off -t on ${DESKNAME}.panetab9.solaris.top1
+viewlight  -a on -d on -e on -h on -l on -n 20 -s on ${DESKNAME}.panetab9.solaris.top1
+viewbackground -b on -e off -q 1 -i off -m 0 0 -M 1 1 ${DESKNAME}.panetab9.solaris.top1
+viewroto  -S file -F '' -C '' -a on -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off persp ${DESKNAME}.panetab9.solaris.top1
+viewroto  -S file -F '' -C '' -a on -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off cam ${DESKNAME}.panetab9.solaris.top1
+viewroto  -S file -F '' -C '' -a off -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off top ${DESKNAME}.panetab9.solaris.top1
+viewroto  -S file -F '' -C '' -a off -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off front ${DESKNAME}.panetab9.solaris.top1
+viewroto  -S file -F '' -C '' -a off -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off right ${DESKNAME}.panetab9.solaris.top1
+viewroto  -S file -F '' -C '' -a off -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off bottom ${DESKNAME}.panetab9.solaris.top1
+viewroto  -S file -F '' -C '' -a off -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off back ${DESKNAME}.panetab9.solaris.top1
+viewroto  -S file -F '' -C '' -a off -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off left ${DESKNAME}.panetab9.solaris.top1
+viewroto  -S file -F 'lookdev/uvgrid_grey.exr' -C '' -a on -f 'scale' -o 0 0 -s 1 1 -O 1 -B 0.2 -e off uv ${DESKNAME}.panetab9.solaris.top1
+viewroto  -S file -F '' -C '' -a on -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off image ${DESKNAME}.panetab9.solaris.top1
+viewforeground -d on -f on -D Pz -s 0 ${DESKNAME}.panetab9.solaris.top1
+viewforeground -o 1 ${DESKNAME}.panetab9.solaris.top1
+viewtransform ${DESKNAME}.panetab9.solaris.top1 version ( 3 )  flag ( Fox )  orthowidth ( 3277.44 )  focal ( 50 )  aperture ( 41.4214 )  window ( 0 1 0 1 )  winroll ( 0 )  clear ( 1 )  nearfar ( 0.1 10000 )  aspect ( 1.33333 )  pixelaspect ( 1 )  txyz ( 284.114 779.656 5789.09 )  pxyz ( 284.114 779.656 992.875 )  rotation ( 1 0 0 0 1.19209e-07 1 0 -1 1.19209e-07  )  homedistance ( 4796.22 )  homeadjboxwidth ( 3277.44 )  homeorthowidth ( 3277.44 )  homeradius ( 4497.09 )  homeaxis ( 0 )  homecustom ( 0.707107 -0.353553 0.612372 0 0.866025 0.5 -0.707107 -0.353553 0.612372  )  adjustlimits ( 0 )  fov ( 45b)  inffreecam ( 0 )  
+vieworthogrid -d off -o 0 0 0 -s 0.2 0.2 -r 5 5 -R 1 ${DESKNAME}.panetab9.solaris.top1
+viewuvgrid -r on -s 0.1 0.1 -P off -S 64 64 -O 0 0 -C on -t on ${DESKNAME}.panetab9.solaris.top1
+viewagentopts  -L on -b 0 -d 1 -l 0 -m 4 -p 1000 -w 1 -B 1 ${DESKNAME}.panetab9.solaris.top1
+viewcharacteropts  -D off ${DESKNAME}.panetab9.solaris.top1
+viewonionskin  -e on -a 4 -b 4 -i 6 -o 0.5 -A 1 1 1 -B 1 1 1 ${DESKNAME}.panetab9.solaris.top1
+viewposteffects  -D off -B off -t "" -f off -V off -S on -a 1 -b 5 -F 1 -g 1 -c 1 1 1 -C 1 1 1 -d 1e+06 -h 0 -H 100 10 -i 1 -I 1 -l 1 -n "" -o 1 -O 1 -r 0 1000 -R 1 200 -s 1 1 -u 0 -U 100 10 -v 0 ${DESKNAME}.panetab9.solaris.top1
+viewposteffects  -e off -E 10 -T 0.95 -L 1 ${DESKNAME}.panetab9.solaris.top1
+viewmaskoverlay -o 0.4 ${DESKNAME}.panetab9.solaris.top1
+viewdispset -m off always -n off always -c off always -u off always -x off always -N off always -C off always -b off always -M off always -v off always -V off always -U off always -h off -P off -p off -f off -o off -w off -s shade -F off -l on -L on -G off -B none -d uv -r unique scene ${DESKNAME}.panetab9.solaris.front1
+viewdispset -t off  scene ${DESKNAME}.panetab9.solaris.front1
+viewdispset -m off always -n off always -c off always -u off always -x off always -N off always -C off always -b off always -M off always -v off always -V off always -U off always -h off -P off -p off -f off -o off -w off -s shade -F off -l on -L on -G off -B none -d uv -r scene selectscene ${DESKNAME}.panetab9.solaris.front1
+viewdispset -t off  selectscene ${DESKNAME}.panetab9.solaris.front1
+viewdispset -m off always -n off always -c off always -u off always -x off always -N off always -C off always -b off always -M off always -v off always -V off always -U off always -h off -P off -p off -f off -o off -w off -s shade -F off -l on -L off -G on -B none -d uv -r unique ghostscene ${DESKNAME}.panetab9.solaris.front1
+viewdispset -t off  ghostscene ${DESKNAME}.panetab9.solaris.front1
+viewdispset -m off always -n off always -c off always -u off always -x off always -N off always -C off always -b off always -M off always -v off always -V off always -U off always -h off -P on -p off -f off -o off -w on -s shade -F off -l on -L on -G off -B none -d uv -r unique display ${DESKNAME}.panetab9.solaris.front1
+viewdispset -t on  display ${DESKNAME}.panetab9.solaris.front1
+viewdispset -m off always -n off always -c off always -u off always -x off always -N off always -C off always -b off always -M off always -v off always -V off always -U off always -h off -P on -p off -f off -o off -w off -s wire -F off -l on -L off -G off -B none -d uv -r unique current ${DESKNAME}.panetab9.solaris.front1
+viewdispset -t off  current ${DESKNAME}.panetab9.solaris.front1
+viewdispset -m off always -n off always -c off always -u off always -x off always -N off always -C off always -b off always -M off always -v off always -V off always -U off always -h off -P off -p off -f off -o off -w off -s wire -F on -l on -L off -G on -B none -d uv -r unique template ${DESKNAME}.panetab9.solaris.front1
+viewdispset -t off  template ${DESKNAME}.panetab9.solaris.front1
+viewdisplay -B dark -b off -d off -C 2 -e 1 -F on -f off -g on -G '*' -h off -H on -j off -J off -L on -n 0.2 -o off -O on -q on -r on -s off -t on -V 2 -z off -y off -x off -X off -U 4 -Y 4 -T on -R on -i on -D on -k off ${DESKNAME}.panetab9.solaris.front1
+viewdisplay -Q on -m on -v on ${DESKNAME}.panetab9.solaris.front1
+viewdisplay -W  off 0 0 ${DESKNAME}.panetab9.solaris.front1
+viewdisplay -c on -l1 -K on -P points -p 3 ${DESKNAME}.panetab9.solaris.front1
+viewdispopts -a on -A 0.5 -b current -B 0 -c 1 -C 60  -d  on -D 1 -g on -i on -n on -N 1000000 -o off -p 10 -P on -r off -R on -S 768 -l 128 -m 0.05 -M 1024 -s on -t 0.5 -u uv -w 0.1 -W 0.9 -x on -X off ${DESKNAME}.panetab9.solaris.front1
+viewdispopts -f off -k 0 -I 1 -O on -T MatCap/OilClay.pic -U lookdev/uvgrid_grey.exr -v 1 ${DESKNAME}.panetab9.solaris.front1
+viewdispopts -G 2 ${DESKNAME}.panetab9.solaris.front1
+viewdispopts -j 1 -J 1 -K 1 ${DESKNAME}.panetab9.solaris.front1
+vieweffect -a 2 -A 4 -b on -B 1 -d on -D on off -e 0.6 -E 0 0 -100 -f 2 -F 0 -g 1 -G 0 -h 1 -H on -i on -I 1 -j on -J 100 -K 2 -k 1 -l '' -m on -M 2048 -o off -O 3 -p off -P 3 -q 0 -Q 2 -r 2048 2048 -s 2 -t 100 -T 100 -u off -U off -v 256 256 256 -w 0.05 -W on -x 0.8 0.8 0.8 -X 0.8 0.8 0.8 -y 0.8 0.8 0.8 -Y 0.0025 0.0025 0.0025 -z 0.01 -Z 1 ${DESKNAME}.panetab9.solaris.front1
+viewinfotext -m off -s off -t on ${DESKNAME}.panetab9.solaris.front1
+viewlight  -a on -d on -e on -h on -l on -n 20 -s on ${DESKNAME}.panetab9.solaris.front1
+viewbackground -b on -e off -q 1 -i off -m 0 0 -M 1 1 ${DESKNAME}.panetab9.solaris.front1
+viewroto  -S file -F '' -C '' -a on -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off persp ${DESKNAME}.panetab9.solaris.front1
+viewroto  -S file -F '' -C '' -a on -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off cam ${DESKNAME}.panetab9.solaris.front1
+viewroto  -S file -F '' -C '' -a off -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off top ${DESKNAME}.panetab9.solaris.front1
+viewroto  -S file -F '' -C '' -a off -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off front ${DESKNAME}.panetab9.solaris.front1
+viewroto  -S file -F '' -C '' -a off -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off right ${DESKNAME}.panetab9.solaris.front1
+viewroto  -S file -F '' -C '' -a off -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off bottom ${DESKNAME}.panetab9.solaris.front1
+viewroto  -S file -F '' -C '' -a off -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off back ${DESKNAME}.panetab9.solaris.front1
+viewroto  -S file -F '' -C '' -a off -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off left ${DESKNAME}.panetab9.solaris.front1
+viewroto  -S file -F 'lookdev/uvgrid_grey.exr' -C '' -a on -f 'scale' -o 0 0 -s 1 1 -O 1 -B 0.2 -e off uv ${DESKNAME}.panetab9.solaris.front1
+viewroto  -S file -F '' -C '' -a on -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off image ${DESKNAME}.panetab9.solaris.front1
+viewforeground -d on -f on -D Pz -s 0 ${DESKNAME}.panetab9.solaris.front1
+viewforeground -o 1 ${DESKNAME}.panetab9.solaris.front1
+viewtransform ${DESKNAME}.panetab9.solaris.front1 version ( 3 )  flag ( Fox )  orthowidth ( 1866.67 )  focal ( 50 )  aperture ( 41.4214 )  window ( 0 1 0 1 )  winroll ( 0 )  clear ( 1 )  nearfar ( 0.1 10000 )  aspect ( 1.33333 )  pixelaspect ( 1 )  txyz ( 284.114 779.656 4720.99 )  pxyz ( 284.114 779.656 992.875 )  rotation ( 1 0 0 0 1 0 0 0 1  )  homedistance ( 3728.11 )  homeadjboxwidth ( 1866.67 )  homeorthowidth ( 1866.67 )  homeradius ( 3355.3 )  homeaxis ( 0 )  homecustom ( 0.707107 -0.353553 0.612372 0 0.866025 0.5 -0.707107 -0.353553 0.612372  )  adjustlimits ( 0 )  fov ( 45b)  inffreecam ( 0 )  
+vieworthogrid -d off -o 0 0 0 -s 0.2 0.2 -r 5 5 -R 1 ${DESKNAME}.panetab9.solaris.front1
+viewuvgrid -r on -s 0.1 0.1 -P off -S 64 64 -O 0 0 -C on -t on ${DESKNAME}.panetab9.solaris.front1
+viewagentopts  -L on -b 0 -d 1 -l 0 -m 4 -p 1000 -w 1 -B 1 ${DESKNAME}.panetab9.solaris.front1
+viewcharacteropts  -D off ${DESKNAME}.panetab9.solaris.front1
+viewonionskin  -e on -a 4 -b 4 -i 6 -o 0.5 -A 1 1 1 -B 1 1 1 ${DESKNAME}.panetab9.solaris.front1
+viewposteffects  -D off -B off -t "" -f off -V off -S on -a 1 -b 5 -F 1 -g 1 -c 1 1 1 -C 1 1 1 -d 1e+06 -h 0 -H 100 10 -i 1 -I 1 -l 1 -n "" -o 1 -O 1 -r 0 1000 -R 1 200 -s 1 1 -u 0 -U 100 10 -v 0 ${DESKNAME}.panetab9.solaris.front1
+viewposteffects  -e off -E 10 -T 0.95 -L 1 ${DESKNAME}.panetab9.solaris.front1
+viewmaskoverlay -o 0.4 ${DESKNAME}.panetab9.solaris.front1
+viewdispset -m off always -n off always -c off always -u off always -x off always -N off always -C off always -b off always -M off always -v off always -V off always -U off always -h off -P off -p off -f off -o off -w off -s shade -F off -l on -L on -G off -B none -d uv -r unique scene ${DESKNAME}.panetab9.solaris.right1
+viewdispset -t off  scene ${DESKNAME}.panetab9.solaris.right1
+viewdispset -m off always -n off always -c off always -u off always -x off always -N off always -C off always -b off always -M off always -v off always -V off always -U off always -h off -P off -p off -f off -o off -w off -s shade -F off -l on -L on -G off -B none -d uv -r scene selectscene ${DESKNAME}.panetab9.solaris.right1
+viewdispset -t off  selectscene ${DESKNAME}.panetab9.solaris.right1
+viewdispset -m off always -n off always -c off always -u off always -x off always -N off always -C off always -b off always -M off always -v off always -V off always -U off always -h off -P off -p off -f off -o off -w off -s shade -F off -l on -L off -G on -B none -d uv -r unique ghostscene ${DESKNAME}.panetab9.solaris.right1
+viewdispset -t off  ghostscene ${DESKNAME}.panetab9.solaris.right1
+viewdispset -m off always -n off always -c off always -u off always -x off always -N off always -C off always -b off always -M off always -v off always -V off always -U off always -h off -P on -p off -f off -o off -w on -s shade -F off -l on -L on -G off -B none -d uv -r unique display ${DESKNAME}.panetab9.solaris.right1
+viewdispset -t on  display ${DESKNAME}.panetab9.solaris.right1
+viewdispset -m off always -n off always -c off always -u off always -x off always -N off always -C off always -b off always -M off always -v off always -V off always -U off always -h off -P on -p off -f off -o off -w off -s wire -F off -l on -L off -G off -B none -d uv -r unique current ${DESKNAME}.panetab9.solaris.right1
+viewdispset -t off  current ${DESKNAME}.panetab9.solaris.right1
+viewdispset -m off always -n off always -c off always -u off always -x off always -N off always -C off always -b off always -M off always -v off always -V off always -U off always -h off -P off -p off -f off -o off -w off -s wire -F on -l on -L off -G on -B none -d uv -r unique template ${DESKNAME}.panetab9.solaris.right1
+viewdispset -t off  template ${DESKNAME}.panetab9.solaris.right1
+viewdisplay -B dark -b off -d off -C 2 -e 1 -F on -f off -g on -G '*' -h off -H on -j off -J off -L on -n 0.2 -o off -O on -q on -r on -s off -t on -V 2 -z off -y off -x off -X off -U 4 -Y 4 -T on -R on -i on -D on -k off ${DESKNAME}.panetab9.solaris.right1
+viewdisplay -Q on -m on -v on ${DESKNAME}.panetab9.solaris.right1
+viewdisplay -W  off 0 0 ${DESKNAME}.panetab9.solaris.right1
+viewdisplay -c on -l1 -K on -P points -p 3 ${DESKNAME}.panetab9.solaris.right1
+viewdispopts -a on -A 0.5 -b current -B 0 -c 1 -C 60  -d  on -D 1 -g on -i on -n on -N 1000000 -o off -p 10 -P on -r off -R on -S 768 -l 128 -m 0.05 -M 1024 -s on -t 0.5 -u uv -w 0.1 -W 0.9 -x on -X off ${DESKNAME}.panetab9.solaris.right1
+viewdispopts -f off -k 0 -I 1 -O on -T MatCap/OilClay.pic -U lookdev/uvgrid_grey.exr -v 1 ${DESKNAME}.panetab9.solaris.right1
+viewdispopts -G 2 ${DESKNAME}.panetab9.solaris.right1
+viewdispopts -j 1 -J 1 -K 1 ${DESKNAME}.panetab9.solaris.right1
+vieweffect -a 2 -A 4 -b on -B 1 -d on -D on off -e 0.6 -E 0 0 -100 -f 2 -F 0 -g 1 -G 0 -h 1 -H on -i on -I 1 -j on -J 100 -K 2 -k 1 -l '' -m on -M 2048 -o off -O 3 -p off -P 3 -q 0 -Q 2 -r 2048 2048 -s 2 -t 100 -T 100 -u off -U off -v 256 256 256 -w 0.05 -W on -x 0.8 0.8 0.8 -X 0.8 0.8 0.8 -y 0.8 0.8 0.8 -Y 0.0025 0.0025 0.0025 -z 0.01 -Z 1 ${DESKNAME}.panetab9.solaris.right1
+viewinfotext -m off -s off -t on ${DESKNAME}.panetab9.solaris.right1
+viewlight  -a on -d on -e on -h on -l on -n 20 -s on ${DESKNAME}.panetab9.solaris.right1
+viewbackground -b on -e off -q 1 -i off -m 0 0 -M 1 1 ${DESKNAME}.panetab9.solaris.right1
+viewroto  -S file -F '' -C '' -a on -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off persp ${DESKNAME}.panetab9.solaris.right1
+viewroto  -S file -F '' -C '' -a on -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off cam ${DESKNAME}.panetab9.solaris.right1
+viewroto  -S file -F '' -C '' -a off -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off top ${DESKNAME}.panetab9.solaris.right1
+viewroto  -S file -F '' -C '' -a off -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off front ${DESKNAME}.panetab9.solaris.right1
+viewroto  -S file -F '' -C '' -a off -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off right ${DESKNAME}.panetab9.solaris.right1
+viewroto  -S file -F '' -C '' -a off -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off bottom ${DESKNAME}.panetab9.solaris.right1
+viewroto  -S file -F '' -C '' -a off -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off back ${DESKNAME}.panetab9.solaris.right1
+viewroto  -S file -F '' -C '' -a off -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off left ${DESKNAME}.panetab9.solaris.right1
+viewroto  -S file -F 'lookdev/uvgrid_grey.exr' -C '' -a on -f 'scale' -o 0 0 -s 1 1 -O 1 -B 0.2 -e off uv ${DESKNAME}.panetab9.solaris.right1
+viewroto  -S file -F '' -C '' -a on -f 'scale' -o 0 0 -s 1 1 -O 1 -B 1 -e off image ${DESKNAME}.panetab9.solaris.right1
+viewforeground -d on -f on -D Pz -s 0 ${DESKNAME}.panetab9.solaris.right1
+viewforeground -o 1 ${DESKNAME}.panetab9.solaris.right1
+viewtransform ${DESKNAME}.panetab9.solaris.right1 version ( 3 )  flag ( Fox )  orthowidth ( 3277.44 )  focal ( 50 )  aperture ( 41.4214 )  window ( 0 1 0 1 )  winroll ( 0 )  clear ( 1 )  nearfar ( 0.1 10000 )  aspect ( 1.33333 )  pixelaspect ( 1 )  txyz ( 284.114 779.656 5485.09 )  pxyz ( 284.114 779.656 992.875 )  rotation ( 6.12323e-17 0 1 0 1 0 -1 0 6.12323e-17  )  homedistance ( 4492.22 )  homeadjboxwidth ( 3277.44 )  homeorthowidth ( 3277.44 )  homeradius ( 3559.81 )  homeaxis ( 0 )  homecustom ( 0.707107 -0.353553 0.612372 0 0.866025 0.5 -0.707107 -0.353553 0.612372  )  adjustlimits ( 0 )  fov ( 45b)  inffreecam ( 0 )  
+vieworthogrid -d off -o 0 0 0 -s 0.2 0.2 -r 5 5 -R 1 ${DESKNAME}.panetab9.solaris.right1
+viewuvgrid -r on -s 0.1 0.1 -P off -S 64 64 -O 0 0 -C on -t on ${DESKNAME}.panetab9.solaris.right1
+viewagentopts  -L on -b 0 -d 1 -l 0 -m 4 -p 1000 -w 1 -B 1 ${DESKNAME}.panetab9.solaris.right1
+viewcharacteropts  -D off ${DESKNAME}.panetab9.solaris.right1
+viewonionskin  -e on -a 4 -b 4 -i 6 -o 0.5 -A 1 1 1 -B 1 1 1 ${DESKNAME}.panetab9.solaris.right1
+viewposteffects  -D off -B off -t "" -f off -V off -S on -a 1 -b 5 -F 1 -g 1 -c 1 1 1 -C 1 1 1 -d 1e+06 -h 0 -H 100 10 -i 1 -I 1 -l 1 -n "" -o 1 -O 1 -r 0 1000 -R 1 200 -s 1 1 -u 0 -U 100 10 -v 0 ${DESKNAME}.panetab9.solaris.right1
+viewposteffects  -e off -E 10 -T 0.95 -L 1 ${DESKNAME}.panetab9.solaris.right1
+viewmaskoverlay -o 0.4 ${DESKNAME}.panetab9.solaris.right1
+viewsnapshotoption -s off -h off -a 1 -v '*' -m 0 ${DESKNAME}.panetab9.solaris
+cplane -o 0 0 0 -n 4.37114e-08 1 -4.37114e-08 -x 1.91069e-15 4.37114e-08 1 -l n -s 0.1 0.1 -c 40 40 -r 10 10 -d off ${DESKNAME}.panetab9.solaris
+glcache -t 1638 -v 6553
+sceneviewopts -C on -c off -e on -F on -g on -H on -i -1 -k "__xform__" -l off -m on -M on -p "" -P off -s off -S 1 -r "BRAY_HdKarmaXPU" -K off -R 960 540 -V off ${DESKNAME}.panetab9.solaris
+sceneviewconfig -y 1 -l 1 -o 1 -g -p -m "High Quality Lighting and Shadows" "Houdini GL" ${DESKNAME}.panetab9.solaris
+sceneviewconfig -y 1 -l 1 -o 1 -r -m "High Quality Lighting" "Karma CPU" ${DESKNAME}.panetab9.solaris
+sceneviewconfig -y 1 -l 1 -o 1 -r -m "High Quality Lighting" "Karma XPU" ${DESKNAME}.panetab9.solaris
+viewlayout -s 2 ${DESKNAME}.panetab9.solaris
+viewtype -t ortho_right ${DESKNAME}.panetab9.solaris.`vpname("${DESKNAME}.panetab9.solaris",4)`
+viewtype -t ortho_front ${DESKNAME}.panetab9.solaris.`vpname("${DESKNAME}.panetab9.solaris",3)`
+viewtype -t ortho_top ${DESKNAME}.panetab9.solaris.`vpname("${DESKNAME}.panetab9.solaris",1)`
+viewtype -t perspective ${DESKNAME}.panetab9.solaris.`vpname("${DESKNAME}.panetab9.solaris",2)`
+pythonpanel -s on -t off -n log_viewer panetab1
+geospreadsheet -c 0 -l horizontal -s 0.5 -m none -f 0 panetab16
+scenegraphtree -S 0.25 -m 2 -p "/collections /lights" -c  -i  -o  -x 1 -s 1 -M 0 -C primtype,descendants,kind,populated,loaded,activation,visibility,solo,selectability  panetab16
+pythonpanel -s on -t off -n rig_tree panetab12
+networkeditor -p '{\n	"taskgraphcollapsemode":"Off",\n	"backgroundimageediting":"0",\n	"gridxstep":"2.0",\n	"overviewmode":"2",\n	"workitemattrtocollapseby":"",\n	"showparmdialogmax":"1",\n	"showtaskgraphperf":"0",\n	"palettecolors":"",\n	"taskgraphsortcriteria":"Automatic",\n	"showparmdialog":"0",\n	"showspareinputdep":"1",\n	"taskgraphperfstatname":"Cook Time",\n	"showmenu":"1",\n	"taskgraphsortdirection":"0",\n	"showdep":"0",\n	"showtasksmenu":"1",\n	"showcopsmenu":"1",\n	"palettemode":"0",\n	"gridmode":"0",\n	"gridystep":"1.0",\n	"showperfstats":"1",\n	"overviewbounds":"0.000000 0.000000 496.500000 113.100000",\n	"perfstatname":"Time",\n	"palettesize":"240 240",\n	"showchilddep":"1",\n	"backgroundimagebrightness":"1.0",\n	"workitemcolorattribute":"",\n	"useworkitemcolorattribute":"0"\n}\n' panetab15
+networkeditor -p '{\n	"taskgraphcollapsemode":"Off",\n	"backgroundimageediting":"0",\n	"gridxstep":"2.0",\n	"overviewmode":"2",\n	"workitemattrtocollapseby":"",\n	"showparmdialogmax":"1",\n	"showtaskgraphperf":"0",\n	"palettecolors":"",\n	"obj:listmode":"0",\n	"showtree":"0",\n	"taskgraphsortcriteria":"Automatic",\n	"showparmdialog":"1",\n	"showtimedep":"0",\n	"showspareinputdep":"1",\n	"taskgraphperfstatname":"Cook Time",\n	"showmenu":"1",\n	"taskgraphsortdirection":"0",\n	"sop:listmode":"0",\n	"typesidebarsplit":"0.25",\n	"showdep":"0",\n	"showtasksmenu":"1",\n	"showcopsmenu":"1",\n	"treesplit":"0.25",\n	"palettemode":"0",\n	"gridmode":"1",\n	"showgrouplist":"0",\n	"gridystep":"1.0",\n	"showperfstats":"1",\n	"overviewbounds":"0.000000 0.000000 348.222610 449.821046",\n	"perfstatname":"Time",\n	"palettesize":"150 150",\n	"grouplistsplit":"0.75",\n	"showchilddep":"1",\n	"backgroundimagebrightness":"1.0",\n	"workitemcolorattribute":"",\n	"useworkitemcolorattribute":"1",\n	"showtypesidebar":"0"\n}\n' panetab7
+netcolumns -c display,xray,select,origin,capture,bone -n OBJ panetab7
+netcolumns -c display,render,template,selectabletemplate,highlight,unload,bypass,lock -n SOP panetab7
+netcolumns -c delscript,comment -n CHOPNET panetab7
+netcolumns -c display,export,audio,bypass,lock -n CHOP panetab7
+netcolumns -c startrender,bypass,lock -n ROP panetab7
+netcolumns -c delscript,comment -n SHOP panetab7
+netcolumns -c display,render,template,bypass -n COP2 panetab7
+netcolumns -c delscript,comment -n IMG panetab7
+netcolumns -c delscript,comment,input -n VOP panetab7
+netcolumns -c delscript,comment -n VOPNET panetab7
+netcolumns -c delscript,comment -n DOP panetab7
+netcolumns -c delscript,comment -n TOP panetab7
+netcolumns -c delscript,comment -n TOPNET panetab7
+netcolumns -c display,bypass,delscript,comment,input -n LOP panetab7
+netcolumns -c delscript,comment -n COP panetab7
+netcolumns -c delscript,comment -n MGR panetab7
+netcolumns -c delscript,comment -n DIR panetab7
+netcolumns -c delscript,comment -n DATA panetab7
+scenegraphtree -S 0.25 -m 2 -p "/collections /lights" -c  -i  -o  -x 1 -s 1 -M 0 -C primtype,descendants,material,populated,loaded,activation,visibility,solo,selectability  panetab8
+pythonpanel -s on -t off -n SceneGraphDetails panetab17

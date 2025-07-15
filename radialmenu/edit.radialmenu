@@ -1,0 +1,58 @@
+{
+	"fileversion":"20.5.584",
+	"name":"edit",
+	"categories":"Standard",
+	"pane":"network",
+	"label":"Edit",
+	"type":"submenu",
+	"items":{
+		"0":{
+			"label":"PolyExtrude",
+			"type":"script_action",
+			"icon":"SOP_polyextrude",
+			"script":"radialmenu.runShelfTool(kwargs, 'sop_polyextrude::2.0')"
+		},
+		"1":{
+			"label":"Sweep",
+			"type":"script_action",
+			"icon":"SOP_sweep-2.0",
+			"script":"radialmenu.runShelfTool(kwargs, 'sop_sweep::2.0')"
+		},
+		"2":{
+			"label":"Boolean",
+			"type":"script_action",
+			"icon":"SOP_boolean",
+			"script":"radialmenu.runShelfTool(kwargs, 'sop_boolean::2.0')"
+		},
+		"3":{
+			"label":"Fuse",
+			"type":"script_action",
+			"icon":"SOP_fuse",
+			"script":"radialmenu.runShelfTool(kwargs, 'sop_fuse::2.0')"
+		},
+		"4":{
+			"label":"Subdivide",
+			"type":"script_action",
+			"icon":"SOP_subdivide",
+			"script":"radialmenu.runShelfTool(kwargs, 'sop_subdivide')"
+		},
+		"5":{
+			"label":"PolyReduce",
+			"type":"script_action",
+			"icon":"SOP_polyreduce-2.0",
+			"script":"radialmenu.runShelfTool(kwargs, 'sop_polyreduce::2.0')"
+		},
+		"6":{
+			"label":"Clip",
+			"type":"script_action",
+			"icon":"SOP_clip",
+			"script":"radialmenu.runShelfTool(kwargs, 'sop_clip::2.0')"
+		},
+		"7":{
+			"label":"PolyBevel",
+			"type":"script_action",
+			"icon":"SOP_polybevel",
+			"script":"radialmenu.runShelfTool(kwargs, 'sop_polybevel::3.0')"
+		}
+	}
+}

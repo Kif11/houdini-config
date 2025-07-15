@@ -1,0 +1,28 @@
+{
+    "load_package_once": true,
+    "version": "20.5",
+    "enable": true,
+    "env": [
+        {
+            "HCC": "D:/resources/vfx/houdini"
+        },
+        {
+            "HOUDINI_OTLSCAN_PATH": "$HCC/hdas"
+        },
+        {
+            "HOUDINI_TOOLBAR_PATH": "$HCC/toolbar" 
+        },
+        {
+            "HOUDINI_UISCALE": 160
+        },
+        {
+            "HOUDINI_EXTERNAL_HELP_BROWSER": 1
+        },
+        {
+            "KARMA_XPU_DISABLE_EMBREE_DEVICE": 1
+        },
+        {
+            "HOUDINI_TEXTURE_DISK_CACHE": "temp"
+        }
+    ]
+}

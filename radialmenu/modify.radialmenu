@@ -1,0 +1,22 @@
+{
+	"fileversion":"20.5.584",
+	"name":"modify",
+	"categories":"Standard",
+	"pane":"network",
+	"label":"Modify",
+	"type":"submenu",
+	"items":{
+		"0":{
+			"label":"Duplicate",
+			"type":"script_action",
+			"icon":"SOP_duplicate",
+			"script":"radialmenu.runShelfTool(kwargs, 'geometry_duplicate')"
+		},
+		"6":{
+			"label":"Copy to Points",
+			"type":"script_action",
+			"icon":"SOP_copy",
+			"script":"radialmenu.runShelfTool(kwargs, 'geometry_copy')"
+		}
+	}
+}

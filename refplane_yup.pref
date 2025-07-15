@@ -1,0 +1,18 @@
+{
+version 0.8
+gspace	[ 0	locks=0 ]	(	5	5	)
+gcount	[ 0	locks=0 ]	(	20	20	)
+gruler	[ 0	locks=0 ]	(	20	20	)
+origin	[ 0	locks=0 ]	(	0	0	0	)
+rotation	[ 0	locks=0 ]	(	0	-90	-90	)
+rotationorder	[ 0	locks=0 ]	(	"xyz"	)
+upvector	[ 0	locks=0 ]	(	0	0	1	)
+lockup	[ 0	locks=0 ]	(	"locknorm"	)
+rulertype	[ 0	locks=0 ]	(	"axes"	)
+parmgroup_extras	[ 0	locks=0 ]	(	1	)
+parmgroup_orientbyaxes	[ 0	locks=0 ]	(	0	)
+targetnormal	[ 0	locks=0 ]	(	0	1	0	)
+targetxaxis	[ 0	locks=0 ]	(	0	0	1	)
+fetchaxes	[ 0	locks=0 ]	(	0	)
+applyaxes	[ 0	locks=0 ]	(	0	)
+}

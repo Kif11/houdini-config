@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shelfDocument>
+  <!-- This file contains definitions of shelves, toolbars, and tools.
+ It should not be hand-edited when it is being used by the application.
+ Note, that two definitions of the same element are not allowed in
+ a single file. -->
+
+  <tool name="geo_from_clipboard_path" label="Geo From Clipboard Path" icon="PLASMA_App">
+    <script scriptType="python"><![CDATA[import os
+import subprocess
+from functools import partial
+
+import hou
+
+def read_clipboard():
+    text = hou.ui.getTextFromClipboard()
+
+    return text.replace('"', '').replace('\\', '/')
+
+def parse_path(string):
+    if not os.path.exists(string):
+        return {}, "Data in you cliboard is not a valid path or path doesn't exist. Use Ctr + Shift + C on Windows to copy file path from Explorer."
+
+    name, ext = os.path.splitext(os.path.basename(string))
+
+    return {"path": string, "name": name, "ext": ext}, ""
+
+def make_path_relative(path):
+    hip_dir = os.path.dirname(hou.hipFile.path())
+    return path.replace(hip_dir, "$HIP")
+
+def create_file_node_with_path_from_clipboard():
+
+    string = read_clipboard()
+    file, err = parse_path(string)
+    if err != "":
+        hou.ui.displayMessage(err)
+        return
+    
+    file["path"] = make_path_relative(file["path"])
+
+    desktop = hou.ui.curDesktop()
+    pane =  desktop.paneTabUnderCursor()
+
+    node = hou.node("/obj")
+
+    # User clicked shelf tool icon
+    if pane == None:
+        node = node.createNode("geo")
+        node.setName(file["name"])
+    
+    # User running from some other context, preferably obj or geo
+    else:
+        node = pane.pwd()
+
+        # Create geo node if user running from geo root context
+        if node.path() == "/obj":
+            node = node.createNode("geo")
+            node.setName(file["name"])
+
+    match file["ext"]:
+        case ".abc":
+            n = node.createNode('alembic', file["name"])
+            n.parm('fileName').set(file["path"])
+            n.bypass(0)
+
+        case ".fbx":
+            n = node.createNode('labs::fbx_archive_import', file["name"])
+            n.parm('sFBXFile').set(file["path"])
+            n.parm('reload').pressButton()
+            n.bypass(0)
+
+        case _:
+            # Use File ROP for anythong else
+            n = node.createNode('file', file["name"])
+            n.parm('file').set(file["path"])
+            n.bypass(0)
+
+create_file_node_with_path_from_clipboard()]]></script>
+  </tool>
+
+  <tool name="tool_1" label="New Tool" icon="PLASMA_App">
+    <script scriptType="python"><![CDATA[def enterViewState():
+    scene_viewer = hou.ui.paneTabOfType(hou.paneTabType.SceneViewer)
+    scene_viewer.enterViewState()
+
+print("enter view state")
+enterViewState()]]></script>
+  </tool>
+
+  <toolshelfEdit name="create" fileLocation="C:/PROGRA~1/SIDEEF~1/HOUDIN~1.278/houdini/toolbar/ShelfDefinitions.shelf"/>
+
+  <shelfSetEdit name="shelf_set_1" fileLocation="C:/PROGRA~1/SIDEEF~1/HOUDIN~1.278/houdini/toolbar/ShelfDefinitions.shelf">
+    <addMemberToolshelf name="codercat_shelf" inPosition="14"/>
+  </shelfSetEdit>
+</shelfDocument>

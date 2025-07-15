@@ -1,0 +1,52 @@
+{
+	"fileversion":"20.5.584",
+	"name":"create",
+	"categories":"Standard",
+	"pane":"network",
+	"label":"Create",
+	"type":"submenu",
+	"items":{
+		"0":{
+			"label":"Sphere",
+			"type":"script_action",
+			"icon":"SOP_sphere",
+			"script":"radialmenu.runShelfTool(kwargs, 'geometry_sphere')"
+		},
+		"1":{
+			"label":"Curve Bezier",
+			"type":"script_action",
+			"icon":"SOP_curve",
+			"script":"radialmenu.runShelfTool(kwargs, 'sop_curve::2.0_bezier')"
+		},
+		"2":{
+			"label":"Null",
+			"type":"script_action",
+			"icon":"OBJ_null",
+			"script":"radialmenu.runShelfTool(kwargs, 'object_null')"
+		},
+		"4":{
+			"label":"Tube",
+			"type":"script_action",
+			"icon":"SOP_tube",
+			"script":"radialmenu.runShelfTool(kwargs, 'geometry_tube')"
+		},
+		"5":{
+			"label":"Torus",
+			"type":"script_action",
+			"icon":"SOP_torus",
+			"script":"radialmenu.runShelfTool(kwargs, 'sop_torus')"
+		},
+		"6":{
+			"label":"Circle",
+			"type":"script_action",
+			"icon":"SOP_circle",
+			"script":"radialmenu.runShelfTool(kwargs, 'geometry_circle')"
+		},
+		"7":{
+			"label":"Box",
+			"type":"script_action",
+			"icon":"SOP_box",
+			"script":"radialmenu.runShelfTool(kwargs, 'sop_box')"
+		}
+	}
+}
