@@ -79,15 +79,6 @@ def create_file_node_with_path_from_clipboard():
 create_file_node_with_path_from_clipboard()]]></script>
   </tool>
 
-  <tool name="tool_1" label="New Tool" icon="PLASMA_App">
-    <script scriptType="python"><![CDATA[def enterViewState():
-    scene_viewer = hou.ui.paneTabOfType(hou.paneTabType.SceneViewer)
-    scene_viewer.enterViewState()
-
-print("enter view state")
-enterViewState()]]></script>
-  </tool>
-
   <toolshelfEdit name="create" fileLocation="C:/PROGRA~1/SIDEEF~1/HOUDIN~1.278/houdini/toolbar/ShelfDefinitions.shelf"/>
 
   <shelfSetEdit name="shelf_set_1" fileLocation="C:/PROGRA~1/SIDEEF~1/HOUDIN~1.278/houdini/toolbar/ShelfDefinitions.shelf">

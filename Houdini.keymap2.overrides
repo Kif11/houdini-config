@@ -11,11 +11,6 @@
 					"action":"h.pane.gview.accept",
 					"keys":["Enter","Ctrl+Space"
 					]
-				},
-				{
-					"action":"h.pane.gview.tool:tool_1",
-					"keys":["Alt+D"
-					]
 				}
 			]
 		},
@@ -33,23 +28,23 @@
 			"symbol":"h.pane.wsheet",
 			"bindings":[
 				{
+					"action":"h.pane.wsheet.color_palette",
+					"keys":[
+					]
+				},
+				{
 					"action":"h.pane.wsheet.delete",
 					"keys":["Del","X"
 					]
 				},
 				{
-					"action":"h.pane.wsheet.radial:create",
-					"keys":["Alt+Ctrl+C"
-					]
-				},
-				{
-					"action":"h.pane.wsheet.radial:edit",
-					"keys":["Ctrl+E"
-					]
-				},
-				{
 					"action":"h.pane.wsheet.radial:modify",
 					"keys":["Alt+D"
+					]
+				},
+				{
+					"action":"h.pane.wsheet.radial:uber",
+					"keys":["C"
 					]
 				},
 				{

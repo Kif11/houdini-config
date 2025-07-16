@@ -1,0 +1,148 @@
+{
+	"fileversion":"20.5.584",
+	"name":"uber",
+	"categories":"Standard",
+	"pane":"network",
+	"label":"Uber",
+	"type":"submenu",
+	"items":{
+		"0":{
+			"label":"Model",
+			"type":"submenu",
+			"items":{
+				"0":{
+					"label":"PolyExtrude",
+					"type":"script_action",
+					"icon":"SOP_polyextrude-2.0",
+					"script":"radialmenu.runShelfTool(kwargs, 'sop_polyextrude::2.0')"
+				},
+				"1":{
+					"label":"Normal",
+					"type":"script_action",
+					"icon":"SOP_normal",
+					"script":"radialmenu.runShelfTool(kwargs, 'sop_normal')"
+				},
+				"2":{
+					"label":"Boolean",
+					"type":"script_action",
+					"icon":"SOP_boolean-2.0",
+					"script":"radialmenu.runShelfTool(kwargs, 'sop_boolean::2.0')"
+				},
+				"3":{
+					"label":"PolyReduce",
+					"type":"script_action",
+					"icon":"SOP_polyreduce-2.0",
+					"script":"radialmenu.runShelfTool(kwargs, 'sop_polyreduce::2.0')"
+				},
+				"5":{
+					"label":"PolyFrame",
+					"type":"script_action",
+					"icon":"SOP_polyframe",
+					"script":"radialmenu.runShelfTool(kwargs, 'sop_polyframe')"
+				},
+				"6":{
+					"label":"CC Bevel Corners",
+					"type":"script_action",
+					"icon":"SOP_subnet",
+					"script":"radialmenu.runShelfTool(kwargs, 'sop_cc_bevel_corners')"
+				},
+				"7":{
+					"label":"Sweep",
+					"type":"script_action",
+					"icon":"SOP_sweep-2.0",
+					"script":"radialmenu.runShelfTool(kwargs, 'sop_sweep::2.0')"
+				}
+			}
+		},
+		"2":{
+			"label":"Create",
+			"type":"submenu",
+			"items":{
+				"0":{
+					"label":"Tube",
+					"type":"script_action",
+					"icon":"SOP_tube",
+					"script":"radialmenu.runShelfTool(kwargs, 'sop_tube')"
+				},
+				"1":{
+					"label":"Circle",
+					"type":"script_action",
+					"icon":"SOP_circle",
+					"script":"radialmenu.runShelfTool(kwargs, 'sop_circle')"
+				},
+				"2":{
+					"label":"Box",
+					"type":"script_action",
+					"icon":"SOP_box",
+					"script":"radialmenu.runShelfTool(kwargs, 'sop_box')"
+				},
+				"3":{
+					"label":"Grid",
+					"type":"script_action",
+					"icon":"SOP_grid",
+					"script":"radialmenu.runShelfTool(kwargs, 'sop_grid')"
+				},
+				"4":{
+					"label":"Curves",
+					"type":"submenu",
+					"items":{
+						"3":{
+							"label":"Line",
+							"type":"script_action",
+							"icon":"SOP_line",
+							"script":"radialmenu.runShelfTool(kwargs, 'sop_line')"
+						},
+						"4":{
+							"label":"Curve",
+							"type":"script_action",
+							"icon":"SOP_curve",
+							"script":"radialmenu.runShelfTool(kwargs, 'sop_curve::2.0')"
+						},
+						"5":{
+							"label":"Resample",
+							"type":"script_action",
+							"icon":"SOP_resample",
+							"script":"radialmenu.runShelfTool(kwargs, 'sop_resample')"
+						}
+					}
+				},
+				"5":{
+					"label":"Sphere",
+					"type":"script_action",
+					"icon":"SOP_sphere",
+					"script":"radialmenu.runShelfTool(kwargs, 'sop_sphere')"
+				}
+			}
+		},
+		"6":{
+			"label":"Modify",
+			"type":"submenu",
+			"items":{
+				"0":{
+					"label":"Copy and Transform",
+					"type":"script_action",
+					"icon":"SOP_copyxform",
+					"script":"radialmenu.runShelfTool(kwargs, 'sop_copyxform')"
+				},
+				"5":{
+					"label":"Mirror",
+					"type":"script_action",
+					"icon":"SOP_mirror",
+					"script":"radialmenu.runShelfTool(kwargs, 'sop_mirror')"
+				},
+				"6":{
+					"label":"Transform",
+					"type":"script_action",
+					"icon":"SOP_xform",
+					"script":"radialmenu.runShelfTool(kwargs, 'sop_xform')"
+				},
+				"7":{
+					"label":"Copy to Points",
+					"type":"script_action",
+					"icon":"SOP_copytopoints-2.0",
+					"script":"radialmenu.runShelfTool(kwargs, 'sop_copytopoints::2.0')"
+				}
+			}
+		}
+	}
+}
