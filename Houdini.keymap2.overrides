@@ -48,6 +48,16 @@
 					]
 				},
 				{
+					"action":"h.pane.wsheet.shape_palette",
+					"keys":[
+					]
+				},
+				{
+					"action":"h.pane.wsheet.updir",
+					"keys":["Z"
+					]
+				},
+				{
 					"action":"h.pane.wsheet.visualize_mode",
 					"keys":[
 					]

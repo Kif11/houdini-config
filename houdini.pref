@@ -176,5 +176,5 @@ ui.textport.help := 1;
 ui.textport.paren := 1;
 ui.textport.syntax := 1;
 undomemlimit.val := 102400;
-viewport.renderer.val := 0;
+viewport.renderer.val := 1;
 wiretoggle.val := "Wireframe Ghost";

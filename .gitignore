@@ -11,3 +11,6 @@ SideFXLabs
 *.pyc
 
 QtWebEngine
+
+jump.pref
+wingeo.pref
